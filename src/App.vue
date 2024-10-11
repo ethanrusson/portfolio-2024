@@ -6,9 +6,9 @@ import ProjectsItem from './components/ProjectsItem.vue';
 import MiscItem from './components/MiscItem.vue';
 import GridBackground from './components/GridBackground.vue';
 import DarkModeToggle from './components/DarkModeToggle.vue';
-import { ExperienceData } from './ExperienceData.ts';
-import { ProjectsData } from './ProjectsData.ts';
-import { MiscData } from './MiscData.ts';
+import { ExperienceData } from './ExperienceData';
+import { ProjectsData } from './ProjectsData';
+import { MiscData } from './MiscData';
 import { useScroll } from '@vueuse/core';
 
 const main = ref<HTMLElement | null>(null);

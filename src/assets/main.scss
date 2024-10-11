@@ -204,19 +204,4 @@ a {
   background: var(--glass-background);
   box-shadow: var(--glass-inner-shadow);
   overflow: hidden;
-  // &::before {
-  //   content: "";
-  //   display: block;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   background: url(/src/assets/noise.svg);
-  //   background-repeat: repeat;
-  //   background-size: 320px;
-  //   mix-blend-mode: overlay;
-  //   opacity: 0.5;
-  //   pointer-events: none;
-  // }
 }

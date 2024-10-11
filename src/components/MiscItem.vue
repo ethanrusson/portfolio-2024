@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import MiscDataInterface from '../MiscData.ts';
+import { type MiscDataInterface } from '../MiscData';
 
 defineProps<{
     item: MiscDataInterface
@@ -10,8 +10,8 @@ defineProps<{
     <div class="misc-item flex-column">
         <h3>{{ item.title }}</h3>
         <ul class="tag-list gap-1">
-            <li v-for="item of item.items" class="tag">
-                {{ item }}
+            <li v-for="tag of item.items" class="tag">
+                {{ tag }}
             </li>
         </ul>
     </div>

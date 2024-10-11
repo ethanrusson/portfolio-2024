@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ProjectsDataInterface from '../ProjectsData.ts';
+import { type ProjectsDataInterface } from '../ProjectsData';
 
 const props = defineProps<{
     item: ProjectsDataInterface

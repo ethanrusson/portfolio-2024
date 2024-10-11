@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ExperienceDataInterface from '../ExperienceData.ts';
+import { type ExperienceDataInterface } from '../ExperienceData';
 
 defineProps<{
     item: ExperienceDataInterface
