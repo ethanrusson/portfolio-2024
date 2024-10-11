@@ -1,0 +1,8 @@
+import './assets/main.scss'
+import "normalize.css"
+
+
+import { createApp } from 'vue'
+import App from './App.vue'
+
+createApp(App).mount('#app')
