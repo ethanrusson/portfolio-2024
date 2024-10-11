@@ -8,7 +8,7 @@ export interface ProjectsDataInterface {
 export const ProjectsData: ProjectsDataInterface[] = [
     {
         title: 'Ohanami Scoring Companion',
-        thumbnail: './src/assets/thumbnail-ohanami.png',
+        thumbnail: new URL('./assets/thumbnail-ohanami.png', import.meta.url).href,
         url: 'https://ohanamiscorer.ethanrusson.com/',
         skills: [
             'Design + Code',
@@ -17,7 +17,7 @@ export const ProjectsData: ProjectsDataInterface[] = [
     },
     {
         title: 'Bridal Shower Invitation 1',
-        thumbnail: './src/assets/thumbnail-emily.png',
+        thumbnail: new URL('./assets/thumbnail-emily.png', import.meta.url).href,
         url: 'https://emilys-bridal-shower.netlify.app/',
         skills: [
             'Design + Code',
@@ -27,7 +27,7 @@ export const ProjectsData: ProjectsDataInterface[] = [
     },
     {
         title: 'Bridal Shower Invitation 2',
-        thumbnail: './src/assets/thumbnail-elle.png',
+        thumbnail: new URL('./assets/thumbnail-elle.png', import.meta.url).href,
         url: 'https://elles-bridal-shower.netlify.app/',
         skills: [
             'Design + Code',
@@ -36,7 +36,7 @@ export const ProjectsData: ProjectsDataInterface[] = [
     },
     {
         title: 'Tangled in Tulle',
-        thumbnail: './src/assets/thumbnail-tangled-in-tulle.png',
+        thumbnail: new URL('./assets/thumbnail-tangled-in-tulle.png', import.meta.url).href,
         url: 'https://tangledtulle.com/',
         skills: [
             'Design + Code',
@@ -45,7 +45,7 @@ export const ProjectsData: ProjectsDataInterface[] = [
     },
     {
         title: 'Wealth of Health Nutrition',
-        thumbnail: './src/assets/thumbnail-wealth-of-health.png',
+        thumbnail: new URL('./assets/thumbnail-wealth-of-health.png', import.meta.url).href,
         url: 'https://wealthofhealthnutrition.com/',
         skills: [
             'Design + Code',
@@ -55,7 +55,7 @@ export const ProjectsData: ProjectsDataInterface[] = [
     },
     {
         title: 'Behance Projects',
-        thumbnail: './src/assets/thumbnail-behance.png',
+        thumbnail: new URL('./assets/thumbnail-behance.png', import.meta.url).href,
         url: 'https://www.behance.net/ethanrusson',
         skills: [
             'Branding',
