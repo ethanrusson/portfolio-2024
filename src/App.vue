@@ -6,6 +6,7 @@ import ProjectsItem from './components/ProjectsItem.vue';
 import MiscItem from './components/MiscItem.vue';
 import GridBackground from './components/GridBackground.vue';
 import DarkModeToggle from './components/DarkModeToggle.vue';
+import FontToggle from './components/FontToggle.vue';
 import { ExperienceData } from './ExperienceData';
 import { ProjectsData } from './ProjectsData';
 import { MiscData } from './MiscData';
@@ -20,6 +21,7 @@ const { top: toTop, bottom: toBottom } = toRefs(directions);
 <template>
   <main ref="main">
     <DarkModeToggle></DarkModeToggle>
+    <FontToggle></FontToggle>
     <!-- <GridBackground></GridBackground> -->
     <PortfolioSection link="Hey there" :height="3" background="var(--highlight-1)" :scrollingDown="toBottom"
       expectedHeight="256px">

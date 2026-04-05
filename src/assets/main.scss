@@ -1,9 +1,10 @@
 html {
+  --font-family: "p22-mackinac-pro", serif;
+
   * {
     box-sizing: border-box;
     margin: 0px;
-    font-family: "p22-mackinac-pro", serif;
-    letter-spacing: -2%;
+    font-family: var(--font-family);
     font-size: 1rem;
 
     &::selection {
@@ -26,7 +27,9 @@ html {
   }
 }
 
-
+html[data-font="sans"] {
+  --font-family: "articulat-cf", sans-serif;
+}
 
 html[data-theme="default"] {
   --surface-0-opacity: 255, 255, 255;
