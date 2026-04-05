@@ -29,7 +29,7 @@ const { top: toTop, bottom: toBottom } = toRefs(directions);
         I like building things worth using.
       </h1>
       <div class="hey-there-links flex gap-2">
-        <a href="https://github.com/ethanrusson">
+        <!-- <a href="https://github.com/ethanrusson">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="var(--surface-900)" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_106_292)">
               <path
@@ -41,7 +41,7 @@ const { top: toTop, bottom: toBottom } = toRefs(directions);
               </clipPath>
             </defs>
           </svg>
-        </a>
+        </a> -->
         <a href="https://www.linkedin.com/in/ethan-russon/">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="var(--surface-900)" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -74,6 +74,9 @@ const { top: toTop, bottom: toBottom } = toRefs(directions);
       expectedHeight="600px">
       <MiscItem v-for="item in MiscData" :item="item"></MiscItem>
     </PortfolioSection>
+    <footer>
+      <p>&copy; {{ new Date().getFullYear() }} Ethan Russon | Design, code, and overthinking by Ethan Russon.</p>
+    </footer>
   </main>
 </template>
 
@@ -101,6 +104,12 @@ main {
     background: var(--surface-100);
   }
 
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
 }
 
 .hey-there-links {

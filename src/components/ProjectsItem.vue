@@ -9,12 +9,7 @@ const props = defineProps<{
 <template>
     <a :href="item.url" target="_blank" class="projects-item flex-column">
         <div class="projects-item-thumbnail">
-            <img :src="item.thumbnail" />
-            <ul class="tags-wrapper tag-list gap-05">
-                <li v-for="skill of item.skills" class="tag">
-                    {{ skill }}
-                </li>
-            </ul>
+            <img :src="item.thumbnail" loading="lazy" />
             <div class="open-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 -960 960 960" width="64">
                     <path
@@ -24,6 +19,11 @@ const props = defineProps<{
         </div>
 
         <h3>{{ item.title }}</h3>
+        <ul class="tags-wrapper">
+            <li v-for=" skill of item.skills">
+                {{ skill }}
+            </li>
+        </ul>
     </a>
 </template>
 
@@ -39,6 +39,7 @@ const props = defineProps<{
     border-radius: 1.25rem;
     overflow: hidden;
     transition: 0.15s ease;
+    will-change: transform;
 
     &:nth-child(4) {
         margin-top: 6rem;
@@ -71,17 +72,6 @@ const props = defineProps<{
             border-radius: 1rem;
             border: 0.5px solid var(--surface-0);
             transition: 0.1s ease;
-        }
-
-        .tags-wrapper {
-            position: absolute;
-            bottom: 0.25rem;
-            left: 0.25rem;
-            flex-wrap: wrap;
-
-            .tag {
-                background: var(--surface-50);
-            }
         }
 
         .open-icon {
@@ -121,6 +111,22 @@ const props = defineProps<{
             .open-icon {
                 opacity: 1;
             }
+        }
+    }
+
+    .tags-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        font-style: italic;
+        font-weight: normal;
+        padding: 0 0.5rem;
+        margin-top: -0.25rem;
+        list-style: none;
+        opacity: 0.75;
+        gap: 0rem 1rem;
+
+        li {
+            line-height: 1.5;
         }
     }
 }

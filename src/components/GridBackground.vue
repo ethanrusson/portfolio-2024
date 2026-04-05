@@ -22,6 +22,7 @@ const verticalLines = 32;
     z-index: -2;
     display: flex;
     opacity: var(--background-opacity);
+    pointer-events: none;
 
     &.horizontal {
         flex-direction: column;
