@@ -10,7 +10,7 @@ defineProps<{
     <div class="misc-item flex-column">
         <h3>{{ item.title }}</h3>
         <ul class="tag-list gap-1">
-            <li v-for="tag of item.items" class="tag">
+            <li v-for="tag of item.items" :key="tag" class="tag">
                 {{ tag }}
             </li>
         </ul>

@@ -38,6 +38,7 @@ function scrollToElement(link: string) {
       </a>
     </div>
     <div class="section-content flex-column">
+      <div class="background-line"></div>
       <slot></slot>
     </div>
   </section>
@@ -81,10 +82,11 @@ section {
     --highlight: v-bind('props.background');
     position: fixed;
     width: 100vw;
-    height: 80vh;
-    top: 0px;
-    left: 0px;
-    background: radial-gradient(circle at 50% 0%, var(--highlight), transparent 30%);
+    max-width: 960px;
+    height: 100vh;
+    top: 0;
+    transform: translateX(-4rem);
+    background: radial-gradient(circle at 0% 50%, var(--highlight), transparent 30%);
     transition: 2s ease;
     z-index: -2;
   }
@@ -138,8 +140,6 @@ section {
     align-content: flex-start;
     transition: 0.3s ease;
     flex-wrap: wrap;
-    border-radius: 0rem 2rem 2rem 0rem;
-    border-left: 1px solid var(--surface-900);
 
     &:has(a.projects-item) {
       max-height: 1200px;
@@ -167,7 +167,8 @@ section {
       top: 0;
 
       a {
-        position: static;
+        position: sticky;
+        top: 1rem;
         opacity: 1;
       }
     }

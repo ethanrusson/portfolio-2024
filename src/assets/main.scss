@@ -45,10 +45,10 @@ html[data-theme="default"] {
   --surface-950: #182D2E;
   --text-primary: #182D2E;
   --text-secondary: #455753;
-  --highlight-1: var(--surface-0);
-  --highlight-2: lightblue;
-  --highlight-3: violet;
-  --highlight-4: lightgreen;
+  --highlight-1: var(--surface-50);
+  --highlight-2: #add0dc;
+  --highlight-3: #e8cbcb;
+  --highlight-4: #b2d7c3;
   --glass-background: rgba(var(--surface-0-opacity), 0.5);
   --background-opacity: 1;
   --glass-border: 0.5px solid var(--surface-0);
@@ -76,9 +76,9 @@ html[data-theme="default-dark"] {
   --text-secondary: #C8C9C1;
   --background-opacity: 1;
   --highlight-1: var(--surface-0);
-  --highlight-2: darkblue;
-  --highlight-3: darkred;
-  --highlight-4: darkgreen;
+  --highlight-2: #072733;
+  --highlight-3: #200a0a;
+  --highlight-4: #0b2919;
   --glass-background: rgba(var(--surface-0-opacity), 0.25);
   --glass-border: 0.5px solid var(--surface-300);
   --glass-outline: 1px solid var(--surface-300);

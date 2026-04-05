@@ -20,7 +20,7 @@ const { top: toTop, bottom: toBottom } = toRefs(directions);
 <template>
   <main ref="main">
     <DarkModeToggle></DarkModeToggle>
-    <GridBackground></GridBackground>
+    <!-- <GridBackground></GridBackground> -->
     <PortfolioSection link="Hey there" :height="3" background="var(--highlight-1)" :scrollingDown="toBottom"
       expectedHeight="256px">
       <h1>
@@ -29,19 +29,6 @@ const { top: toTop, bottom: toBottom } = toRefs(directions);
         I like building things worth using.
       </h1>
       <div class="hey-there-links flex gap-2">
-        <!-- <a href="https://github.com/ethanrusson">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="var(--surface-900)" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_106_292)">
-              <path
-                d="M16 0C24.84 0 32 7.16 32 16C31.9991 19.3524 30.947 22.6201 28.9917 25.3432C27.0364 28.0664 24.2763 30.1077 21.1 31.18C20.3 31.34 20 30.84 20 30.42C20 29.88 20.02 28.16 20.02 26.02C20.02 24.52 19.52 23.56 18.94 23.06C22.5 22.66 26.24 21.3 26.24 15.16C26.24 13.4 25.62 11.98 24.6 10.86C24.76 10.46 25.32 8.82 24.44 6.62C24.44 6.62 23.1 6.18 20.04 8.26C18.76 7.9 17.4 7.72 16.04 7.72C14.68 7.72 13.32 7.9 12.04 8.26C8.98 6.2 7.64 6.62 7.64 6.62C6.76 8.82 7.32 10.46 7.48 10.86C6.46 11.98 5.84 13.42 5.84 15.16C5.84 21.28 9.56 22.66 13.12 23.06C12.66 23.46 12.24 24.16 12.1 25.2C11.18 25.62 8.88 26.3 7.44 23.88C7.14 23.4 6.24 22.22 4.98 22.24C3.64 22.26 4.44 23 5 23.3C5.68 23.68 6.46 25.1 6.64 25.56C6.96 26.46 8 28.18 12.02 27.44C12.02 28.78 12.04 30.04 12.04 30.42C12.04 30.84 11.74 31.32 10.94 31.18C7.75328 30.1193 4.98147 28.082 3.01778 25.3573C1.05409 22.6325 -0.00176096 19.3586 2.20462e-06 16C2.20462e-06 7.16 7.16 0 16 0Z" />
-            </g>
-            <defs>
-              <clipPath id="clip0_106_292">
-                <rect width="32" height="32" fill="white" />
-              </clipPath>
-            </defs>
-          </svg>
-        </a> -->
         <a href="https://www.linkedin.com/in/ethan-russon/">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="var(--surface-900)" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -64,15 +51,15 @@ const { top: toTop, bottom: toBottom } = toRefs(directions);
     </PortfolioSection>
     <PortfolioSection link="Selected Projects" :height="2" background="var(--highlight-2)" :scrollingDown="toBottom"
       expectedHeight="900px">
-      <ProjectsItem v-for="item in ProjectsData" :item="item"></ProjectsItem>
+      <ProjectsItem v-for="(item, index) in ProjectsData" :key="index" :item="item"></ProjectsItem>
     </PortfolioSection>
     <PortfolioSection link="Experience" :height="1" background="var(--highlight-3)" :scrollingDown="toBottom"
       expectedHeight="1080px">
-      <ExperienceItem v-for="item in ExperienceData" :item="item"></ExperienceItem>
+      <ExperienceItem v-for="(item, index) in ExperienceData" :key="index" :item="item"></ExperienceItem>
     </PortfolioSection>
     <PortfolioSection link="Misc." :height="0" background="var(--highlight-4)" :scrollingDown="toBottom"
       expectedHeight="600px">
-      <MiscItem v-for="item in MiscData" :item="item"></MiscItem>
+      <MiscItem v-for="(item, index) in MiscData" :key="index" :item="item"></MiscItem>
     </PortfolioSection>
     <footer>
       <p>&copy; {{ new Date().getFullYear() }} Ethan Russon | Design, code, and overthinking by Ethan Russon.</p>
@@ -95,7 +82,7 @@ main {
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: var(--surface-300);
+    background-color: var(--surface-200);
     border: 0.25rem solid var(--surface-100);
     border-radius: 1rem;
   }

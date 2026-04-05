@@ -20,7 +20,7 @@ const props = defineProps<{
 
         <h3>{{ item.title }}</h3>
         <ul class="tags-wrapper">
-            <li v-for=" skill of item.skills">
+            <li v-for="skill of item.skills" :key="skill">
                 {{ skill }}
             </li>
         </ul>
@@ -41,7 +41,7 @@ const props = defineProps<{
     transition: 0.15s ease;
     will-change: transform;
 
-    &:nth-child(4) {
+    &:nth-child(5) {
         margin-top: 6rem;
     }
 

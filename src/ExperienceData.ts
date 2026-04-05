@@ -10,7 +10,7 @@ export const ExperienceData: ExperienceDataInterface[] = [
     dateRange: '2025 — Present',
     employer: 'Stukent',
     title: 'Director of Product Design',
-    skills: ['Figma, Design Systems', 'Team and Project Management', 'Accessibility Compliance']
+    skills: ['Figma', 'Team/Project Management', 'WCAG Compliance']
   },
   {
     dateRange: '2023 — 2025',
