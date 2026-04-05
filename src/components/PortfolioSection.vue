@@ -31,9 +31,7 @@ function scrollToElement(link: string) {
 </script>
 
 <template>
-  <!-- <section ref="section" :id="formattedLink" class="flex glass-effect"
-    :class="[{ visible: scrolledIntoView }, { 'scrolling-up': scrollingUp }, { 'scrolling-down': scrollingDown }]"></section> -->
-  <section ref="section" :id="formattedLink" class="flex" :class="[{ visible: scrolledIntoView }]">
+  <section ref="section" :id="formattedLink" class="flex" :class="{ visible: scrolledIntoView }">
     <div class="section-link">
       <a @click="scrollToElement(formattedLink)" :style="{ paddingBottom: height * 3 + 'rem' }">
         {{ link }}
@@ -96,6 +94,8 @@ section {
     padding: 2rem 4rem 2rem 2rem;
     text-align: right;
     align-self: stretch;
+    font-style: italic;
+    transition: 0.2s ease;
     cursor: pointer;
 
 
@@ -163,6 +163,7 @@ section {
 
     .section-link {
       position: sticky;
+      font-style: normal;
       top: 0;
 
       a {
@@ -174,11 +175,6 @@ section {
     .section-content {
       border-color: var(--surface-900);
     }
-  }
-
-  &.scrolling-down {
-    transform: perspective(v-bind('props.expectedHeight')) rotateX(2deg);
-    box-shadow: 0px 1rem 2rem rgba(var(--surface-950-opacity), 0.12);
   }
 }
 
